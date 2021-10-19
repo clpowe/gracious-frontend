@@ -1,0 +1,62 @@
+<template>
+  <div class="font-serif overflow-hidden relative min-h-screen">
+    <!-- <div
+      id="snipcart"
+      hidden
+      data-config-modal-style="side"
+      data-api-key="ZDIyNzZhZmUtZTIyYS00ODhmLTk1OTYtZjJlYTMxYTM4NmNhNjM3NjU0MTU5NDk4NTczODA2"
+      class="z-50"
+    ></div> -->
+    <Nav />
+    <Nuxt class="" keep-alive />
+
+    <nuxt-img
+      provider="static"
+      src="/static/bgelement2.svg"
+      class="absolute -bottom-20 -right-72 opacity-50 behind"
+      fit="cover"
+    />
+    <Contact class="pb-24 mt-20" />
+    <Footer />
+    <!-- <client-only>
+      <script
+        async
+        src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"
+      ></script>
+    </client-only> -->
+  </div>
+</template>
+
+<script>
+export default {
+  mounted() {
+    document.addEventListener('snipcart.ready', function () {
+      this.addItemEvent = window.Snipcart.events.on(
+        'item.added',
+        (cartItem) => {
+          // console.log(cartItem)
+        }
+      )
+    })
+  },
+}
+</script>
+
+<style lang="scss">
+.btn {
+  @apply bg-pink-200 py-2 px-4 text-gold hover:text-white hover:bg-pink-300;
+}
+
+.drop {
+  box-shadow: 10px 10px 0 rgba(251, 207, 232, 1);
+  transition: all 0.2s;
+}
+
+.drop:hover {
+  box-shadow: 20px 20px 0 rgba(251, 207, 232, 1);
+}
+
+.behind {
+  z-index: -1;
+}
+</style>

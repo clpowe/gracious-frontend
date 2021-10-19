@@ -1,0 +1,11 @@
+query Products($department: String, $start: Int) {
+  products(where: { department: $department }, limit: 3, start: $start) {
+    id
+    name
+    price
+    description
+    image {
+      url
+    }
+  }
+}
