@@ -25,9 +25,9 @@
 
 <script>
 export default {
-  async asyncData({ $http }) {
+  async asyncData({ $config: { baseURL }, $http }) {
     try {
-      const res = await $http.$get(`http://localhost:1337/about-page`)
+      const res = await $http.$get(`${baseURL}/about-page`)
       const data = res.about
       return { data }
     } catch (error) {

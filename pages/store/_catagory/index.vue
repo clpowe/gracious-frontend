@@ -47,10 +47,10 @@
 
 <script>
 export default {
-  async asyncData({ $http, route }) {
+  async asyncData({ $config: { baseURL }, $http, route }) {
     if (route.params.catagory === 'all') {
       try {
-        const res = await $http.$get(`http://localhost:1337/products`)
+        const res = await $http.$get(`${baseURL}/products`)
         const products = await res
         return { products }
       } catch (error) {
@@ -58,7 +58,7 @@ export default {
       }
     }
     try {
-      const res = await $http.$get(`http://localhost:1337/products`)
+      const res = await $http.$get(`${baseURL}/products`)
       const filter = await res.filter(
         (item) => item.department === route.params.catagory
       )

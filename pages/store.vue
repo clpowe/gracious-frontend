@@ -28,6 +28,9 @@
         <nuxt-link class="btn" :to="{ path: '/store/earrings' }"
           >EARRINGS</nuxt-link
         >
+        <nuxt-link class="btn" :to="{ path: '/store/handbags' }"
+          >HANDBAGS</nuxt-link
+        >
         <nuxt-link class="btn" :to="{ path: '/store/scarves' }"
           >Scarves</nuxt-link
         >

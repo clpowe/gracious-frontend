@@ -10,7 +10,7 @@
           @click="zoomIn((scale = 5))"
         >
           <img
-            :src="$config.baseURL + product.image.url"
+            :src="`${$config.baseURL}${product.image.url}`"
             style="object-fit: contain; width: 100%; height: 100%"
           />
         </v-zoomer>
@@ -27,7 +27,7 @@
           class="snipcart-add-item btn w-36 mx-auto mt-10"
           :data-item-id="product.id"
           :data-item-price="product.price"
-          :data-item-url="`http://localhost:3000/${$route.fullPath}`"
+          :data-item-url="`${$config.storeUrl}${$route.fullPath}`"
           :data-item-description="product.description"
           :data-item-name="product.name"
           :data-item-max-quantity="1"

@@ -52,7 +52,7 @@ export default {
   },
   computed: {
     imageUrl() {
-      return process.env.baseURl
+      return this.$config.baseURL
     },
   },
 }
