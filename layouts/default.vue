@@ -8,7 +8,7 @@
       class="z-50"
     ></div> -->
     <Nav />
-    <Nuxt class="" keep-alive />
+    <Nuxt class="" />
 
     <nuxt-img
       provider="static"
