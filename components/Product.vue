@@ -2,7 +2,7 @@
   <div class="text-center">
     <nuxt-link
       :to="{
-        path: `/${product.id}`,
+        path: `product/${product.id}`,
       }"
       class="mb-4 text-center text-2xl"
     >
