@@ -25,7 +25,7 @@
         <p>{{ product.description }}</p>
         <button
           class="snipcart-add-item btn w-36 mx-auto mt-10"
-          :data-item-id="product.id"
+          :data-item-id="product.name"
           :data-item-price="`${product.price}.00`"
           :data-item-url="`${$config.storeUrl}${$route.fullPath}`"
           :data-item-description="product.description"
