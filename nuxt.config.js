@@ -33,8 +33,7 @@ export default {
 
   env: {
     storeUrl:
-      'http://localhost:3000/' ||
-      'https://gracious-couture-backend.onrender.com',
+      process.env.STORE_URL || 'https://gracious-couture-backend.onrender.com',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -72,7 +71,10 @@ export default {
   publicRuntimeConfig: {
     graphQL: 'https://strapi-oji7.onrender.com/graphql',
     baseURL: 'https://strapi-oji7.onrender.com',
-    storeUrl: process.env.STORE_URL || 'https://gracious-couture.onrender.com',
+    storeUrl:
+      process.env.NODE_ENV === 'production'
+        ? 'https://gracious-couture.onrender.com'
+        : 'http://localhost:3000',
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
