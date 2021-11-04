@@ -72,7 +72,7 @@ export default {
   publicRuntimeConfig: {
     graphQL: 'https://strapi-oji7.onrender.com/graphql',
     baseURL: 'https://strapi-oji7.onrender.com',
-    storeUrl: process.env.STORE_URL,
+    storeUrl: process.env.STORE_URL || 'https://gracious-couture.onrender.com',
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
