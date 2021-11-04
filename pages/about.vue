@@ -1,14 +1,8 @@
 <template>
   <div class="container flex mx-auto mt-24 flex-col">
     <div class="flex-1 grid place-content-center mb-10">
-      <nuxt-picture
-        provider="static"
+      <img
         :src="`${$config.baseURL}${data.image.formats.small.url}`"
-        alt=""
-        width="300"
-        height="300"
-        fit="contain"
-        format="webp"
         class="drop"
       />
     </div>

@@ -1,12 +1,7 @@
 <template>
   <div>
     <section class="container mx-auto py-24">
-      <nuxt-img
-        provider="static"
-        src="/static/Hero_Logo.svg"
-        sizes=""
-        class="mx-auto"
-      />
+      <img src="/Hero_Logo.svg" sizes="" class="mx-auto" />
     </section>
     <section class="container mx-auto py-10">
       <div class="flex uppercase justify-around">
