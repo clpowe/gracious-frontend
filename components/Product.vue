@@ -2,7 +2,7 @@
   <div class="text-center">
     <nuxt-link
       :to="{
-        path: `product/${product.id}`,
+        path: `/product/${product.id}`,
       }"
       class="mb-4 text-center text-2xl"
     >
@@ -10,9 +10,7 @@
 
       <nuxt-img
         :src="$config.baseURL + product.image.url"
-        width="300"
-        height="400"
-        class="drop"
+        class="drop h-64 w-64 object-cover object-center"
         fit="cover"
       />
     </nuxt-link>
