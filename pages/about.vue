@@ -2,6 +2,7 @@
   <div class="container flex mx-auto mt-24 flex-col">
     <div class="flex-1 grid place-content-center mb-10">
       <nuxt-picture
+        provider="static"
         :src="`${$config.baseURL}${data.image.formats.small.url}`"
         alt=""
         width="300"

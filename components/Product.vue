@@ -8,10 +8,9 @@
     >
       {{ product.name }}
 
-      <nuxt-img
+      <img
         :src="$config.baseURL + product.image.url"
         class="drop h-64 w-64 object-cover object-center"
-        fit="cover"
       />
     </nuxt-link>
   </div>
