@@ -46,18 +46,25 @@ import 'vue-inner-image-zoom/lib/vue-inner-image-zoom.css'
 // import productQuery from '../../../apollo/queries/product.gql'
 
 export default {
+  async asyncData({ params }) {
+    const res = await fetch(
+      `https://strapi-oji7.onrender.com/products/${params.id}`
+    )
+    const product = await res.json()
+    return { product }
+  },
   data() {
     return {
       product: null,
       storeUrl: this.$config.storeUrl,
     }
   },
-  async created() {
-    const res = await fetch(
-      `https://strapi-oji7.onrender.com/products/${this.$route.params.id}`
-    )
-    this.product = await res.json()
-  },
+  // async created() {
+  //   const res = await fetch(
+  //     `https://strapi-oji7.onrender.com/products/${this.$route.params.id}`
+  //   )
+  //   this.product = await res.json()
+  // },
   // apollo: {
   //   product: {
   //     prefetch: true,
