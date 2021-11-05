@@ -15,7 +15,7 @@
     <div
       id="snipcart"
       hidden
-      data-api-key="ZDIyNzZhZmUtZTIyYS00ODhmLTk1OTYtZjJlYTMxYTM4NmNhNjM3NjU0MTU5NDk4NTczODA2"
+      data-api-key="NGIyNjQ0MWQtYWI1Yi00YzdjLTg1MDgtZTJkMmEyYjE0YWVkNjM3Njk3NDYxMTI1NzM1MDAw"
     ></div>
   </div>
 </template>

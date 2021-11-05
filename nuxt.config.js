@@ -56,18 +56,18 @@ export default {
     '@braid/vue-formulate/nuxt',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/snipcart',
+    // '@nuxtjs/snipcart',
     '@nuxt/image',
   ],
-  snipcart: {
-    // Options available
+  // snipcart: {
+  //   // Options available
 
-    key: 'NGIyNjQ0MWQtYWI1Yi00YzdjLTg1MDgtZTJkMmEyYjE0YWVkNjM3Njk3NDYxMTI1NzM1MDAw' /* required https://app.snipcart.com/dashboard/account/credentials */,
-    attributes: [
-      ['data-config-modal-style', 'side'],
-      // ['data-config-add-product-behavior', 'none']
-    ],
-  },
+  //   key: 'NGIyNjQ0MWQtYWI1Yi00YzdjLTg1MDgtZTJkMmEyYjE0YWVkNjM3Njk3NDYxMTI1NzM1MDAw' /* required https://app.snipcart.com/dashboard/account/credentials */,
+  //   attributes: [
+  //     ['data-config-modal-style', 'side'],
+  //     // ['data-config-add-product-behavior', 'none']
+  //   ],
+  // },
   image: {
     dir: '/static',
     alias: {
