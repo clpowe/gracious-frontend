@@ -49,6 +49,20 @@ export default {
       url: this.$route.fullPath,
     }
   },
+  head() {
+    return {
+      script: [
+        {
+          json: {
+            id: this.product.id,
+            price: this.product.price,
+            url: this.$route.fullPath,
+          },
+          type: 'application/ld+json',
+        },
+      ],
+    }
+  },
   apollo: {
     product: {
       query: productQuery,
