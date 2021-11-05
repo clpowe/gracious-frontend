@@ -1,18 +1,20 @@
 <template>
   <div class="container mx-auto mt-12 px-10 flex flex-col gap-5 m-10">
     <GoBack class="self-start justify-self-start" />
-    <div class="flex flex-col mx-auto">
-      <v-zoomer
-        style="width: 100%; height: 500px; border: solid 1px silver"
-        class="flex-1 mx-auto px-10"
-        :max-scale="5"
-        @click="zoomIn((scale = 5))"
-      >
-        <img
-          :src="`${$config.baseURL}${product.image.url}`"
-          style="object-fit: contain; width: 100%; height: 100%"
-        />
-      </v-zoomer>
+    <div v-if="product" class="flex flex-col mx-auto">
+      <client-only placeholder="Loading...">
+        <v-zoomer
+          style="width: 100%; height: 500px; border: solid 1px silver"
+          class="flex-1 mx-auto px-10"
+          :max-scale="5"
+          @click="zoomIn((scale = 5))"
+        >
+          <img
+            :src="`${$config.baseURL}${product.image.url}`"
+            style="object-fit: contain; width: 100%; height: 100%"
+          />
+        </v-zoomer>
+      </client-only>
 
       <div class="flex flex-1 flex-col text-center">
         <h1 class="text-gold text-4xl font-light tracking-wider my-4">
@@ -52,6 +54,7 @@ export default {
   },
   apollo: {
     product: {
+      prefetch: true,
       query: productQuery,
       variables() {
         return {

@@ -16,13 +16,19 @@
       id="snipcart"
       hidden
       data-config-modal-style="side"
-      data-api-key="NGIyNjQ0MWQtYWI1Yi00YzdjLTg1MDgtZTJkMmEyYjE0YWVkNjM3Njk3NDYxMTI1NzM1MDAw"
+      :data-api-key="MY_API_KEY"
     ></div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      MY_API_KEY:
+        'NGIyNjQ0MWQtYWI1Yi00YzdjLTg1MDgtZTJkMmEyYjE0YWVkNjM3Njk3NDYxMTI1NzM1MDAw',
+    }
+  },
   // mounted() {
   //   document.addEventListener('snipcart.ready', function () {
   //     this.addItemEvent = window.Snipcart.events.on(
