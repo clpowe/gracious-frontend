@@ -2,12 +2,11 @@
   <div>
     <div class="bg-gradient-to-b from-pink-200 to-white relative">
       <Hero />
-      <nuxt-img
+      <img
         provider="static"
         src="/bgelement2.svg"
-        format="webp"
         sizes="sm:200px md:200px lg:800px"
-        class="absolute -right-60 z-0 top-0 transform -rotate-12"
+        class="absolute -right-60 z-0 top-0 transform -rotate-12 w-72"
       />
     </div>
     <section v-if="data" class="relative overflow-hidden">

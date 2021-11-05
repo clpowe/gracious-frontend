@@ -27,9 +27,11 @@
           class="snipcart-add-item btn w-36 mx-auto mt-10"
           :data-item-id="product.id"
           :data-item-price="product.price"
+          :data-item-url="$route.fullPath"
           :data-item-description="product.description"
           :data-item-name="product.name"
           :data-item-max-quantity="1"
+          :data-item-image="`${$config.baseURL}${product.image.url}`"
         >
           Add to Cart
         </button>
@@ -49,20 +51,7 @@ export default {
       url: this.$route.fullPath,
     }
   },
-  head() {
-    return {
-      script: [
-        {
-          json: {
-            id: this.product.id,
-            price: this.product.price,
-            url: this.$route.fullPath,
-          },
-          type: 'application/ld+json',
-        },
-      ],
-    }
-  },
+
   apollo: {
     product: {
       query: productQuery,
