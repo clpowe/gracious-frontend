@@ -26,7 +26,7 @@
         <button
           class="snipcart-add-item btn w-36 mx-auto mt-10"
           :data-item-id="product.id"
-          :data-item-price="`${product.price}.00`"
+          :data-item-price="product.price"
           :data-item-url="url"
           :data-item-description="product.description"
           :data-item-name="product.name"
@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       product: null,
-      url: this.$config.storeUrl + this.$route.fullPath,
+      url: this.$route.fullPath,
     }
   },
   apollo: {

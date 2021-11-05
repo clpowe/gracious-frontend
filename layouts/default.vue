@@ -1,12 +1,5 @@
 <template>
   <div class="font-serif overflow-hidden relative min-h-screen">
-    <!-- <div
-      id="snipcart"
-      hidden
-      data-config-modal-style="side"
-      data-api-key="ZDIyNzZhZmUtZTIyYS00ODhmLTk1OTYtZjJlYTMxYTM4NmNhNjM3NjU0MTU5NDk4NTczODA2"
-      class="z-50"
-    ></div> -->
     <Nav />
     <Nuxt class="" />
 
@@ -18,27 +11,27 @@
     />
     <Contact class="pb-24 mt-20" />
     <Footer />
-    <!-- <client-only>
-      <script
-        async
-        src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"
-      ></script>
-    </client-only> -->
+
+    <div
+      id="snipcart"
+      hidden
+      data-api-key="ZDIyNzZhZmUtZTIyYS00ODhmLTk1OTYtZjJlYTMxYTM4NmNhNjM3NjU0MTU5NDk4NTczODA2"
+    ></div>
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    document.addEventListener('snipcart.ready', function () {
-      this.addItemEvent = window.Snipcart.events.on(
-        'item.added',
-        (cartItem) => {
-          // console.log(cartItem)
-        }
-      )
-    })
-  },
+  // mounted() {
+  //   document.addEventListener('snipcart.ready', function () {
+  //     this.addItemEvent = window.Snipcart.events.on(
+  //       'item.added',
+  //       (cartItem) => {
+  //         // console.log(cartItem)
+  //       }
+  //     )
+  //   })
+  // },
 }
 </script>
 
