@@ -46,16 +46,19 @@ import 'vue-inner-image-zoom/lib/vue-inner-image-zoom.css'
 // import productQuery from '../../../apollo/queries/product.gql'
 
 export default {
-  async asyncData({ params }) {
-    const res = await fetch(
-      `https://strapi-oji7.onrender.com/products/${params.id}`
-    )
-    const product = await res.json()
-    return { product }
+  async asyncData({ params, $http }) {
+    try {
+      const res = await $http.$get(
+        `https://strapi-oji7.onrender.com/products/${params.id}`
+      )
+      const product = res
+      return { product }
+    } catch (error) {
+      console.error(error)
+    }
   },
   data() {
     return {
-      product: null,
       storeUrl: this.$config.storeUrl,
     }
   },

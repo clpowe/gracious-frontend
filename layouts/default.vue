@@ -1,7 +1,7 @@
 <template>
   <div class="font-serif overflow-hidden relative min-h-screen">
     <Nav />
-    <Nuxt class="" />
+    <Nuxt />
 
     <nuxt-img
       provider="static"
