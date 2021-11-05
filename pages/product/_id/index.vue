@@ -1,20 +1,19 @@
 <template>
   <div class="container mx-auto mt-12 px-10 flex flex-col gap-5 m-10">
     <GoBack class="self-start justify-self-start" />
-    <div v-if="product" class="flex flex-col mx-auto">
-      <client-only>
-        <v-zoomer
-          style="width: 100%; height: 500px; border: solid 1px silver"
-          class="flex-1 mx-auto px-10"
-          :max-scale="5"
-          @click="zoomIn((scale = 5))"
-        >
-          <img
-            :src="`${$config.baseURL}${product.image.url}`"
-            style="object-fit: contain; width: 100%; height: 100%"
-          />
-        </v-zoomer>
-      </client-only>
+    <div class="flex flex-col mx-auto">
+      <v-zoomer
+        style="width: 100%; height: 500px; border: solid 1px silver"
+        class="flex-1 mx-auto px-10"
+        :max-scale="5"
+        @click="zoomIn((scale = 5))"
+      >
+        <img
+          :src="`${$config.baseURL}${product.image.url}`"
+          style="object-fit: contain; width: 100%; height: 100%"
+        />
+      </v-zoomer>
+
       <div class="flex flex-1 flex-col text-center">
         <h1 class="text-gold text-4xl font-light tracking-wider my-4">
           {{ product.name }}
@@ -25,8 +24,8 @@
         <p>{{ product.description }}</p>
         <button
           class="snipcart-add-item btn w-36 mx-auto mt-10"
-          :data-item-id="product.id"
-          :data-item-price="product.price"
+          :data-item-id="+product.id"
+          :data-item-price="+product.price"
           :data-item-url="$route.fullPath"
           :data-item-description="product.description"
           :data-item-name="product.name"
@@ -51,7 +50,6 @@ export default {
       url: this.$route.fullPath,
     }
   },
-
   apollo: {
     product: {
       query: productQuery,
