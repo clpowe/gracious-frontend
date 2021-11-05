@@ -15,6 +15,7 @@
     <div
       id="snipcart"
       hidden
+      data-config-modal-style="side"
       data-api-key="NGIyNjQ0MWQtYWI1Yi00YzdjLTg1MDgtZTJkMmEyYjE0YWVkNjM3Njk3NDYxMTI1NzM1MDAw"
     ></div>
   </div>
