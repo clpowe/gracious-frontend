@@ -94,12 +94,9 @@ export default {
       },
     },
   },
-  router: {
-    trailingSlash: true,
-  },
+  router: {},
   sitemap: {
     hostname: 'https://www.graciouscouture.com/',
-    trailingSlash: true,
   },
   generate: {
     routes() {
