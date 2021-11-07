@@ -94,6 +94,13 @@ export default {
       },
     },
   },
+  router: {
+    trailingSlash: true,
+  },
+  sitemap: {
+    hostname: 'https://www.graciouscouture.com/',
+    trailingSlash: true,
+  },
   generate: {
     routes() {
       return axios
