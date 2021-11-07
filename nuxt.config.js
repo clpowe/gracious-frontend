@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -90,6 +92,20 @@ export default {
       default: {
         httpEndpoint: 'https://strapi-oji7.onrender.com/graphql',
       },
+    },
+  },
+  generate: {
+    routes() {
+      return axios
+        .get('https://strapi-oji7.onrender.com/products')
+        .then((res) => {
+          return res.data.map((item) => {
+            return {
+              route: '/product/' + item.id,
+              payload: item,
+            }
+          })
+        })
     },
   },
 
