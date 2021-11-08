@@ -13,12 +13,10 @@
         </div>
       </div>
       <div class="max-w-md mx-auto grid place-items-center pt-4 md:pt-0">
-        <nuxt-img
+        <img
           :src="`${$config.baseURL}${image}`"
           alt=""
           height="600px"
-          fit="contain"
-          format="webp"
           class="op"
         />
       </div>

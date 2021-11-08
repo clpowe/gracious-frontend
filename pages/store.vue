@@ -4,7 +4,9 @@
       <img src="/Hero_Logo.svg" sizes="" class="mx-auto" />
     </section>
     <section class="container mx-auto py-10">
-      <div class="flex uppercase justify-around">
+      <div
+        class="flex flex-col text-center md:flex-row uppercase justify-around"
+      >
         <nuxt-link
           class="btn"
           :to="{

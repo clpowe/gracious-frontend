@@ -4,7 +4,7 @@
     <div v-if="product !== null" class="flex flex-col mx-auto">
       <client-only placeholder="Loading...">
         <v-zoomer
-          style="width: 400px; height: 300px; border: solid 1px silver"
+          style="width: 100%; height: 300px; border: solid 1px silver"
           class="flex-1 mx-auto px-10"
           :max-scale="5"
           @click="zoomIn((scale = 5))"
