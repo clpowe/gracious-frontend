@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss">
 .btn {
-  @apply bg-pink-200 py-2 px-4 text-gold hover:text-white hover:bg-pink-300;
+  @apply py-2 px-4 text-gold  hover:underline;
 }
 
 .drop {
