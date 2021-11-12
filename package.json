@@ -28,6 +28,7 @@
     "vue-apollo": "^3.0.8",
     "vue-image-zoomer": "^1.2.1",
     "vue-inner-image-zoom": "^1.1.0",
+    "vue-product-zoomer": "^3.0.1",
     "vue-zoomer": "^0.3.9"
   },
   "devDependencies": {

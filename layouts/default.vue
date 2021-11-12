@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       MY_API_KEY:
-        'NGIyNjQ0MWQtYWI1Yi00YzdjLTg1MDgtZTJkMmEyYjE0YWVkNjM3Njk3NDYxMTI1NzM1MDAw',
+        'MzllMDhiNGEtMzlkOC00MmI4LTk0N2MtYThlZDJkNzRkNWYzNjM3Njk3NDYxMTI1NzM1MDAw',
     }
   },
   // mounted() {
